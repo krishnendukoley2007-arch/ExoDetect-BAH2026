@@ -1,9 +1,0 @@
-streamlit
-numpy
-pandas
-matplotlib
-scikit-learn
-torch
-joblib
-requests
-lightkurve
