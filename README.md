@@ -52,7 +52,8 @@ accuracy                             0.92
 ```
 
 ---
-
+##  First instrall git from here https://git-scm.com/install/windows
+then do quick start
 ## ⚡ Quick Start — Run Dashboard in 10 Minutes
 
 Pre-trained models are included. No retraining needed.
