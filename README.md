@@ -66,7 +66,7 @@ cd ExoDetect-BAH2026
 pip install -r requirements.txt
 
 # 3. Launch dashboard
-python -m streamlit run dashboard.py
+python -m python -m streamlit run dashboard.py
 ```
 
 Open your browser at `http://localhost:8501` — done.
@@ -96,7 +96,7 @@ python collect_raw_curves.py
 python train_cnn.py
 
 # Step 6 — Launch dashboard
-python -m streamlit run dashboard.py
+python -m python -m streamlit run dashboard.py
 ```
 
 ---
