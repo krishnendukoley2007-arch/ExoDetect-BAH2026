@@ -47,15 +47,8 @@ accuracy           ~0.87 (5-fold CV)
 
 Pre-trained models are included. No retraining needed. Choose **one** of the two options below.
 
-### Option 1 — Download ZIP (no Git required)
 
-1. Download `ExoDetect-BAH2026-RunPackage.zip` from the [Releases](https://github.com/krishnendukoley2007-arch/ExoDetect-BAH2026/releases) page.
-2. Extract the zip anywhere on your PC.
-3. Double-click **`RUN_ME.bat`**.
-
-That's it — the script automatically checks for Python, creates a virtual environment, installs all dependencies, and launches the dashboard at `http://localhost:8501`.
-
-### Option 2 — Git Clone (auto-refresh)
+### Option 1 — Git Clone (auto-refresh)
 
 Copy and paste the block for your OS/shell directly into your terminal. It deletes any existing copy of the project first, clones a fresh one, installs dependencies, and launches the dashboard — all in one go.
 
@@ -77,6 +70,15 @@ taskkill /F /IM python.exe /T 2>nul & if exist ExoDetect-BAH2026 rmdir /s /q Exo
 ```bash
 rm -rf ExoDetect-BAH2026 && git clone https://github.com/krishnendukoley2007-arch/ExoDetect-BAH2026.git && cd ExoDetect-BAH2026 && pip install -r requirements.txt && python -m streamlit run dashboard.py
 ```
+
+### Option 2 — Download ZIP (no Git required)
+
+1. Download `ExoDetect-BAH2026-RunPackage.zip` from the [Releases](https://github.com/krishnendukoley2007-arch/ExoDetect-BAH2026/releases) page.
+2. Extract the zip anywhere on your PC.
+3. Double-click **`RUN_ME.bat`**.
+
+That's it — the script automatically checks for Python, creates a virtual environment, installs all dependencies, and launches the dashboard at `http://localhost:8501`.
+
 
 Open your browser at `http://localhost:8501` — done.
 > 💡 **Tip:** If you already have a previous copy of this repo cloned, delete the old folder before cloning again to avoid conflicts:
