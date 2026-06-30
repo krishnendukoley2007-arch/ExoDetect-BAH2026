@@ -268,6 +268,8 @@ ExoDetect-BAH2026/
 
 **Fix:** Increase "Sectors to stack" in the sidebar to 3–5, narrow the min/max period range toward the expected period so the BLS power gets above 50, and re-run the analysis.
 
+---
+
 ## 📋 Problem Statement
 
 **BAH2026 PS7:** Develop an AI-based pipeline capable of automatically detecting exoplanet transit signals from noisy TESS light curve data, including:
