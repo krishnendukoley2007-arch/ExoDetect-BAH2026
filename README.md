@@ -86,12 +86,6 @@ Open your browser at `http://localhost:8501` — done.
 > rmdir /s /q ExoDetect-BAH2026   (Windows)
 > rm -rf ExoDetect-BAH2026        (Mac/Linux)
 > \`\`\`
-
-## Result shows "WEAK / NO SIGNAL" with Rule-based: Uncertain* 
-This is not a misclassification; it's a built-in safety override. The dashboard forces this label whenever BLS Power < 50 OR SNR < 3, regardless of what the ML model would otherwise predict (this is also why ML Confidence shows a flat 100% in this case — it's a stub value, not a real model score). This almost always means only 1 sector of TESS data was stacked, which isn't enough signal to clear the detection threshold. 
-##Fix:*
-increase "Sectors to stack" in the sidebar to 3–5 and try to adjust the minimum period and the maximum period (try reducing the minimum period and increasing the maximum period)and make the BLS over 50 and SNR over 5 re-run the analysis .
-```bash
 # Step 1 — Pull labeled stars from NASA TOI catalog
 python build_targets.py
 
