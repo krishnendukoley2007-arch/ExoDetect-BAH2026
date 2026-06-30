@@ -1138,9 +1138,9 @@ page = st.sidebar.radio(
 
 st.sidebar.markdown("---")
 st.sidebar.markdown("**⚙️ Pipeline Settings**")
-max_sectors = st.sidebar.slider("Sectors to stack", 1, 10, 5)
-period_min  = st.sidebar.slider("Min period (days)", 0.5, 5.0, 1.0)
-period_max  = st.sidebar.slider("Max period (days)", 5.0, 30.0, 20.0)
+max_sectors = st.sidebar.slider("Sectors to stack", 1, 10, 3)
+period_min  = st.sidebar.slider("Min period (days)", 0.5, 5.0, 5.0)
+period_max  = st.sidebar.slider("Max period (days)", 5.0, 30.0, 8.0)
 
 if not dataset_pool.empty:
     st.sidebar.markdown("---")
