@@ -62,10 +62,10 @@ Copy and paste the block for your OS/shell directly into your terminal. It delet
 **Windows PowerShell:**
 ```powershell
 Get-Process streamlit -ErrorAction SilentlyContinue |
- Stop-Process -Force; Get-Process python -ErrorAction SilentlyContinue |
- Where-Object { $_.MainWindowTitle -like "*streamlit*" } |
- Stop-Process -Force; if (Test-Path ExoDetect-BAH2026) { Set-Location ExoDetect-BAH2026; git pull } else { git clone https://github.com/krishnendukoley2007-arch/ExoDetect-BAH2026.git; Set-Location ExoDetect-BAH2026 };
- pip install -r requirements.txt; python -m streamlit run dashboard.py
+Stop-Process -Force; Get-Process python -ErrorAction SilentlyContinue |
+Where-Object { $_.MainWindowTitle -like "*streamlit*" } |
+Stop-Process -Force; if (Test-Path ExoDetect-BAH2026) { Set-Location ExoDetect-BAH2026; git pull } else { git clone https://github.com/krishnendukoley2007-arch/ExoDetect-BAH2026.git; Set-Location ExoDetect-BAH2026 };
+pip install -r requirements.txt; python -m streamlit run dashboard.py
 ```
 
 **Windows Command Prompt (cmd.exe):**
