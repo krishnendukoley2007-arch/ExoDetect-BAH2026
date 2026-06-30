@@ -45,9 +45,19 @@ accuracy           ~0.87 (5-fold CV)
 
 ## ⚡ Quick Start — Run Dashboard in 10 Minutes
 
-Pre-trained models are included. No retraining needed.
+Pre-trained models are included. No retraining needed. Choose **one** of the two options below.
 
-```bash
+### Option 1 — Download ZIP (no Git required)
+
+1. Download `ExoDetect-BAH2026-RunPackage.zip` from the [Releases](https://github.com/krishnendukoley2007-arch/ExoDetect-BAH2026/releases) page.
+2. Extract the zip anywhere on your PC.
+3. Double-click **`RUN_ME.bat`**.
+
+That's it — the script automatically checks for Python, creates a virtual environment, installs all dependencies, and launches the dashboard at `http://localhost:8501`.
+
+### Option 2 — Git Clone
+
+\`\`\`bash
 # 1. Clone the repo
 git clone https://github.com/krishnendukoley2007-arch/ExoDetect-BAH2026.git
 cd ExoDetect-BAH2026
@@ -57,16 +67,15 @@ pip install -r requirements.txt
 
 # 3. Launch dashboard
 python -m streamlit run dashboard.py
-```
+\`\`\`
 
 Open your browser at `http://localhost:8501` — done.
 
----
-
-## 🔬 Full Pipeline — Train From Scratch
-
-Only needed if you want to retrain on fresh NASA data.
-> ⚠️ Steps 2 and 4 take 3–5 hours each due to NASA MAST server download time.
+> 💡 **Tip:** If you already have a previous copy of this repo cloned, delete the old folder before cloning again to avoid conflicts:
+> \`\`\`bash
+> rmdir /s /q ExoDetect-BAH2026   (Windows)
+> rm -rf ExoDetect-BAH2026        (Mac/Linux)
+> \`\`\`
 
 ```bash
 # Step 1 — Pull labeled stars from NASA TOI catalog
