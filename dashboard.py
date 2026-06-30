@@ -316,7 +316,7 @@ def load_classifier():
     if os.path.exists("exoplanet_classifier.pkl"):
         clf = joblib.load("exoplanet_classifier.pkl")
         n = str(len(dataset_pool)) if not dataset_pool.empty else "131"
-        return clf, f"RF+GB Ensemble — trained on {n} real NASA TOI stars (88.92% CV accuracy)", True
+        return clf, f"RF+GB Ensemble — trained on {n} real NASA TOI stars (87.35% CV accuracy)", True
 
     # Fallback synthetic prototype
     rng = np.random.default_rng(42)
