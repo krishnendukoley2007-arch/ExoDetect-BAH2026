@@ -48,14 +48,10 @@ accuracy           ~0.87 (5-fold CV)
 Pre-trained models are included. No retraining needed.
 
 ```bash
-# 1. Clone the repo
-git clone https://github.com/krishnendukoley2007-arch/ExoDetect-BAH2026.git
-cd ExoDetect-BAH2026
-
-# 2. Install dependencies
+cd C:\
+git clone https://github.com/krishnendukoley2007-arch/ExoDetect-BAH2026.git ExoDetect-Fresh
+cd ExoDetect-Fresh
 pip install -r requirements.txt
-
-# 3. Launch dashboard
 streamlit run dashboard.py
 ```
 
