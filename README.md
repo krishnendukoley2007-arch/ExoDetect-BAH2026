@@ -86,6 +86,7 @@ Open your browser at `http://localhost:8501` — done.
 > rmdir /s /q ExoDetect-BAH2026   (Windows)
 > rm -rf ExoDetect-BAH2026        (Mac/Linux)
 > \`\`\`
+```
 # Step 1 — Pull labeled stars from NASA TOI catalog
 python build_targets.py
 
@@ -262,7 +263,8 @@ ExoDetect-BAH2026/
 **BLS locks onto the wrong period** — On noisy/shallow signals, BLS can occasionally lock onto a harmonic (an integer multiple) of the true period instead of the true period itself. If your result period looks like a multiple of the expected value, narrow the Min/Max period sliders close to the expected period.
 
 **Model gives wrong classification** — Check the SNR — if below 5, the signal is too weak to classify reliably. Try more sectors.
-
+**Result shows "WEAK / NO SIGNAL" with Rule-based: Uncertain* — This is not a misclassification; it's a built-in safety override. The dashboard forces this label whenever BLS Power < 50 OR SNR < 3, regardless of what the ML model would otherwise predict (this is also why ML Confidence shows a flat 100% in this case — it's a stub value, not a real model score). This almost always means only 1 sector of TESS data was stacked, which isn't enough signal to clear the detection threshold. 
+**Fix: increase "Sectors to stack" in the sidebar to 3–5 try to reduce the minimum period and increase the maximum period and such that the BLS power gets over 50 and re-run the analysis .
 ---
 
 ## 📋 Problem Statement
