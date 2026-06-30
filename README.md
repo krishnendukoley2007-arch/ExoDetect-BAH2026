@@ -60,19 +60,19 @@ That's it — the script automatically checks for Python, creates a virtual envi
 Copy and paste the block for your OS/shell directly into your terminal. It deletes any existing copy of the project first, clones a fresh one, installs dependencies, and launches the dashboard — all in one go.
 
 **Windows PowerShell:**
-\`\`\`powershell
+```powershell
 if (Test-Path ExoDetect-BAH2026) { Remove-Item -Recurse -Force ExoDetect-BAH2026 }; git clone https://github.com/krishnendukoley2007-arch/ExoDetect-BAH2026.git; cd ExoDetect-BAH2026; pip install -r requirements.txt; python -m streamlit run dashboard.py
-\`\`\`
+```
 
 **Windows Command Prompt (cmd.exe):**
-\`\`\`bash
+```bash
 if exist ExoDetect-BAH2026 rmdir /s /q ExoDetect-BAH2026 && git clone https://github.com/krishnendukoley2007-arch/ExoDetect-BAH2026.git && cd ExoDetect-BAH2026 && pip install -r requirements.txt && python -m streamlit run dashboard.py
-\`\`\`
+```
 
 **macOS / Linux:**
-\`\`\`bash
+```bash
 rm -rf ExoDetect-BAH2026 && git clone https://github.com/krishnendukoley2007-arch/ExoDetect-BAH2026.git && cd ExoDetect-BAH2026 && pip install -r requirements.txt && python -m streamlit run dashboard.py
-\`\`\`
+```
 
 Open your browser at `http://localhost:8501` — done.
 > 💡 **Tip:** If you already have a previous copy of this repo cloned, delete the old folder before cloning again to avoid conflicts:
