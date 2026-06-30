@@ -56,7 +56,7 @@ cd ExoDetect-BAH2026
 pip install -r requirements.txt
 
 # 3. Launch dashboard
-streamlit run dashboard.py
+python -m streamlit run dashboard.py
 ```
 
 Open your browser at `http://localhost:8501` — done.
