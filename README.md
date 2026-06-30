@@ -176,7 +176,7 @@ NASA MAST / TESS Satellite
 - BLS periodogram with detected period marked
 - Phase-folded transit with binned model
 - Secondary eclipse check
-- ML classification + confidence %
+- ML classification + confidence (in %)
 - Planet radius estimate (Earth radii)
 - AI plain-English interpretation
 - Downloadable PDF report (standard + deep diagnostics)
