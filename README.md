@@ -267,7 +267,6 @@ ExoDetect-BAH2026/
 **Result shows "WEAK / NO SIGNAL" with Rule-based: Uncertain** — This is not a misclassification; it's a built-in safety override. The dashboard forces this label whenever BLS Power < 50 OR SNR < 3, regardless of what the ML model would otherwise predict (this is also why ML Confidence shows a flat 100% in this case — it's a stub value, not a real model score). This almost always means only 1 sector of TESS data was stacked, which isn't enough signal to clear the detection threshold.
 
 **Fix:** Increase "Sectors to stack" in the sidebar to 3–5, narrow the min/max period range toward the expected period so the BLS power gets above 50, and re-run the analysis.
----
 
 ## 📋 Problem Statement
 
