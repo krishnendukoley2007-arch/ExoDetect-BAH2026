@@ -295,14 +295,7 @@ def load_dataset_pool():
     if not os.path.exists("features_dataset.csv"):
         return pd.DataFrame()
     df = pd.read_csv("features_dataset.csv")
-    df["display_name"] = df.apply(
-        lambda r: (
-            f"TIC {r['tic_id']}  |  "
-            f"{'🪐 Planet' if r['label']=='planet' else '⭐ False Positive'}  |  "
-            f"SNR {r['snr']:.1f}  |  "
-            f"depth {r['depth']*100:.3f}%"
-        ), axis=1
-    )
+    df["display_name"] = df["tic_id"].apply(lambda t: f"TIC {t}")
     return df
 
 dataset_pool = load_dataset_pool()
