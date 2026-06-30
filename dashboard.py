@@ -262,7 +262,7 @@ for key, default in [
 FEATURE_COLS = ["depth", "snr", "sec_ratio", "duration_hours", "bls_power", "odd_even_diff"]
 
 QUICK_STARS = {
-    "Pi Mensae c � Sub-Neptune": "261136679",
+    "Pi Mensae c — Sub-Neptune": "261136679",
     "WASP-126 b — Hot Jupiter":  "25155310",
     "TIC 441075486 — Binary (FP)": "441075486",
 }
@@ -1418,7 +1418,7 @@ elif page == "📄 Project Report":
     <li><b>De-trending</b> — Savitzky-Golay flattening (window 401) removes instrumental systematics</li>
     <li><b>BLS Period Search</b> — Bounded Box Least Squares (≤2000 periods, frequency_factor=1) prevents grid overflow</li>
     <li><b>Phase Folding + Feature Extraction</b> — 6 features: depth, SNR, secondary-eclipse ratio, transit duration, BLS power, odd-even depth difference</li>
-    <li><b>ML Classification — RF+GB Ensemble trained on 556 real NASA TOI labeled stars (planet / false positive), achieving 88.92% 5-fold CV accuracy</li>
+    <li><b>ML Classification — RF+GB Ensemble trained on 641 real NASA TOI labeled stars (planet / false positive), achieving 87.35% 5-fold CV accuracy</li>
     <li><b>AI Interpretation</b> — Natural language summary of signal quality, classification reasoning, and cross-check</li>
     </ol>
     </div>
@@ -1431,7 +1431,7 @@ elif page == "📄 Project Report":
             _lc  = dataset_pool['label'].value_counts()
             _ldf = pd.DataFrame({"Label": _lc.index.astype(str), "Count": _lc.values})
             st.dataframe(_ldf, use_container_width=True)
-            st.caption(f"Total: {len(dataset_pool)} stars from NASA TOI catalog (556 training)")
+            st.caption(f"Total: {len(dataset_pool)} stars from NASA TOI catalog (641 training)")
         else:
             st.info("Run extract_features.py to populate dataset.")
         st.markdown("</div>", unsafe_allow_html=True)
@@ -1440,10 +1440,10 @@ elif page == "📄 Project Report":
         st.markdown("<div class='report-card'><h3>4. Model Comparison</h3>", unsafe_allow_html=True)
         st.dataframe(pd.DataFrame({
             "Model":      ["RandomForest (features)", "1D-CNN (raw curves)"],
-            "5-Fold CV":  ["88.92% ± 1.04%",  "88.65% ± 2.92%"],
+            "5-Fold CV":  ["87.35% ± 1.04%",  "88.65% ± 2.92%"],
             "Status":     ["✓ Deployed",      "✓ Trained"],
         }), use_container_width=True)
-        st.caption("RF+GB Ensemble trained on 556 real NASA TESS stars. CNN trained on 493 phase-folded curves.")
+        st.caption("RF+GB Ensemble trained on 641 real NASA TESS stars. CNN trained on 493 phase-folded curves.")
         st.markdown("</div>", unsafe_allow_html=True)
 
     vc1, vc2 = st.columns(2)
@@ -1458,8 +1458,8 @@ elif page == "📄 Project Report":
     <div class='report-card'>
     <h3>5. Key Improvements in v8.0</h3>
     <ul>
-    <li><b>556-star training dataset</b> — 4× larger than v7 (was 131), pulled directly from NASA TOI catalog with auto-balanced classes</li>
-    <li><b>RF+GB Ensemble</b> — RandomForest + GradientBoosting soft-voting ensemble replaces single RF, boosting CV accuracy from 67% to 88.92%</li>
+    <li><b>641-star training dataset</b> — pulled directly from NASA TOI catalog with auto-balanced classes, expanded from 556 to include additional shallow-transit confirmed planets</li>
+    <li><b>RF+GB Ensemble</b> — RandomForest + GradientBoosting soft-voting ensemble replaces single RF, boosting CV accuracy from 67% to 87.35%</li>
     <li><b>FFI fallback</b> — When SPOC 2-min data unavailable, pipeline automatically tries TESS-SPOC and QLP 10-min FFI data (3× more stars load successfully)</li>
     <li><b>1D-CNN trained</b> — Convolutional neural network on 493 phase-folded curves achieves 88.65% ± 2.92% CV accuracy, confirming ensemble results</li>
     <li><b>Infinity/NaN guard</b> — Feature matrix cleaned before training to prevent float32 overflow crashes</li>
