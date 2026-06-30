@@ -1,0 +1,6 @@
+method,accuracy_pct,planet_recall_pct,planet_precision_pct
+BLS-power threshold only (no ML),58.09,97.54,58.49
+SNR threshold only (no ML),62.41,90.15,62.34
+RandomForest alone,78.96,84.62,80.41
+GradientBoosting alone,77.52,86.46,77.62
+RF+GB Ensemble (production model),78.06,85.23,78.92

@@ -1,0 +1,97 @@
+{
+  "bls_power_only": {
+    "accuracy": 0.5809352517985612,
+    "planet_recall": 0.9753846153846154,
+    "planet_precision": 0.584870848708487,
+    "labels_order": [
+      "false_positive",
+      "planet"
+    ],
+    "confusion_matrix": [
+      [
+        6,
+        225
+      ],
+      [
+        8,
+        317
+      ]
+    ]
+  },
+  "snr_only": {
+    "accuracy": 0.6241007194244604,
+    "planet_recall": 0.9015384615384615,
+    "planet_precision": 0.6234042553191489,
+    "labels_order": [
+      "false_positive",
+      "planet"
+    ],
+    "confusion_matrix": [
+      [
+        54,
+        177
+      ],
+      [
+        32,
+        293
+      ]
+    ]
+  },
+  "random_forest": {
+    "accuracy": 0.789568345323741,
+    "planet_recall": 0.8461538461538461,
+    "planet_precision": 0.804093567251462,
+    "labels_order": [
+      "false_positive",
+      "planet"
+    ],
+    "confusion_matrix": [
+      [
+        164,
+        67
+      ],
+      [
+        50,
+        275
+      ]
+    ]
+  },
+  "grad_boosting": {
+    "accuracy": 0.7751798561151079,
+    "planet_recall": 0.8646153846153846,
+    "planet_precision": 0.7762430939226519,
+    "labels_order": [
+      "false_positive",
+      "planet"
+    ],
+    "confusion_matrix": [
+      [
+        150,
+        81
+      ],
+      [
+        44,
+        281
+      ]
+    ]
+  },
+  "ensemble": {
+    "accuracy": 0.7805755395683454,
+    "planet_recall": 0.8523076923076923,
+    "planet_precision": 0.7891737891737892,
+    "labels_order": [
+      "false_positive",
+      "planet"
+    ],
+    "confusion_matrix": [
+      [
+        157,
+        74
+      ],
+      [
+        48,
+        277
+      ]
+    ]
+  }
+}

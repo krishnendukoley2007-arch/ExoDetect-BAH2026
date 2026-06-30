@@ -1,0 +1,11 @@
+﻿streamlit
+lightkurve
+scikit-learn
+torch
+astropy
+pandas
+numpy
+matplotlib
+scipy
+fpdf2
+plotly
