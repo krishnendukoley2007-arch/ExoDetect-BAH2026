@@ -262,7 +262,7 @@ for key, default in [
 FEATURE_COLS = ["depth", "snr", "sec_ratio", "duration_hours", "bls_power", "odd_even_diff"]
 
 QUICK_STARS = {
-    "Pi Mensae c � Sub-Neptune": "261136679",
+    "Pi Mensae c — Super-Earth": "261136679",
     "WASP-126 b — Hot Jupiter":  "25155310",
     "TIC 441075486 — Binary (FP)": "441075486",
 }
@@ -316,7 +316,7 @@ def load_classifier():
     if os.path.exists("exoplanet_classifier.pkl"):
         clf = joblib.load("exoplanet_classifier.pkl")
         n = str(len(dataset_pool)) if not dataset_pool.empty else "131"
-        return clf, f"RF+GB Ensemble — trained on {n} real NASA TOI stars (87.35% CV accuracy)", True
+        return clf, f"RF+GB Ensemble — trained on {n} real NASA TOI stars (88.92% CV accuracy)", True
 
     # Fallback synthetic prototype
     rng = np.random.default_rng(42)
