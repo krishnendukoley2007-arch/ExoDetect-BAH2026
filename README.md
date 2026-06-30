@@ -52,7 +52,7 @@ cd C:\
 git clone https://github.com/krishnendukoley2007-arch/ExoDetect-BAH2026.git ExoDetect-Fresh
 cd ExoDetect-Fresh
 pip install -r requirements.txt
-streamlit run dashboard.py
+python -m streamlit run dashboard.py
 ```
 
 Open your browser at `http://localhost:8501` — done.
