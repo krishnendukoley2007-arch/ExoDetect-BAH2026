@@ -262,7 +262,7 @@ for key, default in [
 FEATURE_COLS = ["depth", "snr", "sec_ratio", "duration_hours", "bls_power", "odd_even_diff"]
 
 QUICK_STARS = {
-    "Pi Mensae c — Super-Earth": "261136679",
+    "Pi Mensae c � Sub-Neptune": "261136679",
     "WASP-126 b — Hot Jupiter":  "25155310",
     "TIC 441075486 — Binary (FP)": "441075486",
 }
