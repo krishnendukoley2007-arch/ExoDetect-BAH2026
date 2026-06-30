@@ -25,25 +25,6 @@ ExoDetect is a complete end-to-end AI pipeline that **automatically detects and 
 
 When a planet passes in front of its host star, the star dims slightly and periodically. ExoDetect finds these tiny dips — sometimes as small as 0.001% — in the brightness of thousands of stars, and determines whether each dip is a real planet, an eclipsing binary star, or a false alarm.
 
----
-
-## 🔍 A Real Bug We Found and Fixed: Pi Mensae c
-
-We don't just claim our model works — we stress-tested it on a real, confirmed exoplanet and caught it failing.
-
-**The problem:** Pi Mensae c (TIC 261136679), a confirmed Sub-Neptune, was being misclassified as `false_positive` by our trained model, despite the BLS pipeline correctly recovering its real 6.27-day period from actual TESS data. The transit signal was genuinely shallow (~320 ppm) and Pi Mensae c had never been included in our training set — a real gap in our data, not a coding bug.
-
-**What we did:**
-1. Diagnosed the issue directly by testing the live classifier on this star's actual measured features rather than assuming
-2. Pulled 60 additional genuinely shallow, confirmed planets (depth 50–500 ppm) from the NASA TOI catalog, including Pi Mensae c itself
-3. Re-extracted real BLS features for all of them from TESS data and retrained the ensemble
-4. Verified the fix on the same held-out feature vector — Pi Mensae c now classifies correctly as `planet`
-
-**The honest cost:** retraining on these harder edge cases dropped 5-fold CV accuracy slightly, from 88.92% to **87.35%** — a fair tradeoff for a model that now generalizes better to shallow, low-SNR signals instead of only doing well on easy cases.
-
-We also caught and fixed two related bugs during this process: a too-wide BLS period search window that could lock onto harmonics of the true period on noisy stars, and a Streamlit caching issue that served stale dataset stats after retraining.
-
----
 
 ## 📊 Results
 
