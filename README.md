@@ -127,7 +127,7 @@ NASA MAST / TESS Satellite
 │  Stage 3: BLS Period Search              │
 │  Bounded grid (≤2000 periods)            │
 │  Auto-retry on grid overflow             │
-│  Narrow search ±3% around known period   │
+│  Narrow search ±3%  │
 ├──────────────────────────────────────────┤
 │  Stage 4: Feature Extraction             │
 │  6 physical features per star            │
