@@ -1457,7 +1457,7 @@ elif page == "📄 Project Report":
                         ha='center', color=TEXT_C, fontweight='bold', fontsize=12)
         ax_acc.set_ylim(0, 100)
         ax_acc.set_ylabel("5-Fold CV Accuracy (%)")
-        ax_acc.set_title(f"Model Accuracy Comparison\nTrained on {len(dataset_pool) if not dataset_pool.empty else 638} Real NASA TOI Stars",
+        ax_acc.set_title("Model Accuracy Comparison\nTrained on 638 Real NASA TOI Stars",
                          fontsize=10)
         style_ax(ax_acc)
         plt.tight_layout()
