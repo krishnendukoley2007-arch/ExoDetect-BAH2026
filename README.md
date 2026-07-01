@@ -18,7 +18,6 @@
 | Team Member | Asmit Dey | deyasmit07@gmail.com |
 
 ---
-https://1drv.ms/b/c/5ae4624589e8d6a7/IQBZAheUHx-0T7mRdH454cpwAb0y_is98Ir9m-SAiyU0bPU?e=cNkbVi ppt
 
 ## 🌟 What Is This?
 
